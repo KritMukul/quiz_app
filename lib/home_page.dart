@@ -1,16 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_app/gradient_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(context) {
-    return const GradientContainer(
-      [
-        Color.fromARGB(255, 43, 9, 101),
-        Color.fromARGB(255, 52, 35, 141),
-      ],
-    );
+    return Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/images/quiz-logo.png',
+              width: 300,
+              color: const Color.fromARGB(151, 255, 255, 255),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            const Text(
+              'Learn Flutter the fun Way!',
+              style: TextStyle(color: Colors.white),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            OutlinedButton.icon(
+              style: OutlinedButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 240, 203, 250),
+              ),
+              onPressed: () {},
+              icon: const Icon(Icons.arrow_right_alt),
+              label: const Text(
+                'Start Quiz',
+                style: TextStyle(fontSize: 10),
+              ),
+            ),
+          ],
+        ),
+      );
   }
 }
