@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage(this.startQuiz, {super.key});
@@ -19,9 +20,10 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          const Text(
+          Text(
             'Learn Flutter the fun Way!',
-            style: TextStyle(color: Colors.white),
+            style: GoogleFonts.ubuntu(
+                color: const Color.fromARGB(255, 239, 197, 254), fontSize: 30),
           ),
           const SizedBox(
             height: 30,
@@ -29,6 +31,7 @@ class HomePage extends StatelessWidget {
           OutlinedButton.icon(
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color.fromARGB(255, 240, 203, 250),
+              shape: const LinearBorder(),
             ),
             onPressed: startQuiz,
             icon: const Icon(Icons.arrow_right_alt),
