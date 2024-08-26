@@ -37,7 +37,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             Text(
               currentQuestion.text,
               style: GoogleFonts.ubuntu(
-                color: const Color.fromARGB(255, 229, 191, 245),
+                color: const Color.fromARGB(255, 206, 191, 245),
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),

@@ -10,14 +10,14 @@ class HomePage extends StatelessWidget {
   Widget build(context) {
     return Center(
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 30),
+        margin: const EdgeInsets.symmetric(horizontal: 40),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               'assets/images/quiz-logo.png',
               width: 300,
-              color: const Color.fromARGB(151, 255, 255, 255),
+              color: const Color.fromARGB(150, 235, 205, 255),
             ),
             const SizedBox(
               height: 50,
@@ -25,8 +25,7 @@ class HomePage extends StatelessWidget {
             Text(
               'Learn Flutter the fun Way!',
               style: GoogleFonts.ubuntu(
-                  color: const Color.fromARGB(255, 239, 197, 254),
-                  fontSize: 25),
+                  color: const Color.fromARGB(255, 245, 217, 255), fontSize: 25),
               textAlign: TextAlign.center,
             ),
             const SizedBox(

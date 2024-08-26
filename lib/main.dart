@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/quiz.dart';
 
-void main() {
+void  main() {
   runApp(
     const Quiz(),
   );
