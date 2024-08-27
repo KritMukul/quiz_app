@@ -26,6 +26,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   @override
   Widget build(context) {
     final currentQuestion = questions[currentQuestionIndex];
+    final completedRatio = (currentQuestionIndex + 1) / questions.length;
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -46,14 +47,26 @@ class _QuestionScreenState extends State<QuestionScreen> {
             const SizedBox(
               height: 30,
             ),
-            ...currentQuestion.getShuffledAnswers().map((answer) {
-              return AnswerButton(
-                answerText: answer,
-                onTap: () {
-                  answerQuestion(answer);
-                },
-              );
-            }),
+            ...currentQuestion.getShuffledAnswers().map(
+              (answer) {
+                return AnswerButton(
+                  answerText: answer,
+                  onTap: () {
+                    answerQuestion(answer);
+                  },
+                );
+              },
+            ),
+            const SizedBox(height: 50),
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 60),
+              width: 50,
+              child: LinearProgressIndicator(
+                value: completedRatio,
+                color: const Color.fromARGB(255, 47, 235, 175),
+                backgroundColor: const Color.fromARGB(255, 238, 128, 146),
+              ),
+            )
           ],
         ),
       ),
